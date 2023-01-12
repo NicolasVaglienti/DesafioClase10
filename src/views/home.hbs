@@ -1,0 +1,16 @@
+<div>
+    {{#if products}}
+        <ul>
+            {{#each products}}
+            <div id="${item.id}" class="product-card">
+                <img src={{item.picture}} alt="Product Name">
+                <h2>{{this.title}}</h2>
+                <p>{{this.description}}</p>
+                <p>{{this.price}} </p>
+            </div>
+            {{/each}}
+        </ul>
+        {{else}}
+        <h2>No hay productos en la lista</h2>
+        {{/if}}
+</div>
